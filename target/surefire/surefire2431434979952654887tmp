@@ -1,0 +1,8 @@
+#surefire
+#Thu Nov 21 19:19:49 CST 2019
+maven.ext.class.path=D\:\\Archivos de Progra\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=D\:\\Google\\UNIVERSIDAD\\Semestre 9\\Calidad de Software\\MenCrud
+file.encoding=UTF-8
+localRepository=C\:\\Users\\diego\\.m2\\repository
+basedir=D\:\\Google\\UNIVERSIDAD\\Semestre 9\\Calidad de Software\\MenCrud
+test=com.mayab.calidad.funcionales.MenCrudTest
