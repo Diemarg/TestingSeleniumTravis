@@ -1,22 +1,23 @@
 sudo: required
 language: java
-jdk: oraclejdk11
+jdk: oraclejdk13
+      
+services:
+- xvfb
 
 addons:
   chrome: stable
 
-services:
-  - xvfb
-
-before_script:
+before_install:
   - sudo apt-get update
   - sudo apt-get install dbus-x11
   - export DISPLAY=:99.0
-  - sudo apt-get install gconf2
-  - sudo wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
-  - sudo unzip chromedriver_linux64.zip -d /
-  - sudo chmod 777 /chromedriver
+  - sleep 3
+  - sudo apt-get install -y libappindicator1 fonts-liberation
+  - wget https://chromedriver.storage.googleapis.com/2.38/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo cp chromedriver /usr/bin
   
 script: 
-  - mvn clean
-  - mvn test
+- mvn clean
+- mvn test
